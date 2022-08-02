@@ -77,6 +77,7 @@ function setup() {
   button = createImg('cut_btn.png');
   button.position(200,320);
   button.size(50,50);
+  button.mouseClicked(remove_rope);
 
   button2 = createImg('cut_btn.png');
   button2.position(30,420);
@@ -113,7 +114,7 @@ function draw()
 
   if(collide(fruit,bunny,80)==true)
   {
-   remove_rope();
+   //remove_rope();
    bubble.visible = false;
     World.remove(engine.world,fruit);
     fruit = null;
